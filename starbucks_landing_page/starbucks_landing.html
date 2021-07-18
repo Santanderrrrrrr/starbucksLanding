@@ -39,7 +39,7 @@
         <ul class="thumb">
             <li><img src="thumb1.png" alt="Green Cup" onclick="imgSlider('img1.png'); changeCircleColor('#224430');"></li>
             <li><img src="thumb2.png" alt="Pink Cup" onclick="imgSlider('img2.png'); changeCircleColor('#ffb6c1');"></li>
-            <li><img src="thumb3.png" style="transform: rotate(-15deg);" alt="Purple Cup" onclick="imgSlider('img3.png'); changeCircleColor('#ff69b4');"></li>
+            <li><img src="thumb3.png" style="transform: rotate(-15deg);" alt="Purple Cup" onclick="changeCircleColor('#ff69b4'); imgSlider('img3.png'); roteshan();"></li>
         </ul>
         <ul class="shoshIcons">
             <li class="icons" id="fb"><a href="#"><img src="facebook.png" alt="fb_img"></a></li>
@@ -52,6 +52,11 @@
     <script type="text/javascript">
         function imgSlider(glassimages){
             document.querySelector('.glassOnRight').src = glassimages;
+        }
+        function roteshan()
+        {
+            document.querySelector('.glassOnRight').style.transform="rotate(-15deg)";
+            
         }
         function changeCircleColor(color){
             const circle = document.querySelector('.circle');
