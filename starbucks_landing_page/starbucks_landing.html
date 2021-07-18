@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing</title>
+    <link rel="stylesheet" href="starbucksLanding.css">
+</head>
+<body>
+    <section class="landing">
+        <div class="circle"></div>
+        <header class="stuffInTopNav">
+        <!-- top nav menu logo link -->
+            <a href="#"><img src="logo.png" alt="Home" class="logo"></a>
+        
+        <!-- top nav menu hits -->
+            <ul class="MenuItems">
+                <li class="menuItems"><a href="#">Home</a> </li>
+                <li class="menuItems"><a href="#">Menu</a></li>
+                <li class="menuItems"><a href="#">What's New</a></li>
+                <li class="menuItems"><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <!-- content here now -->
+        <div class="content">
+            <div class="actualText">
+                <h2 class="starbucksCoffee">It's Not <span style="text-decoration: line-through;">Just Coffee</span>, <br>it's <b id="boldLettering">Starbucks</b></h2>
+                <p class="loremFiller">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ipsa. Dolorem explicabo doloremque cum error accusantium, in illum voluptas fuga vel temporibus officia ut! Impedit animi ea obcaecati voluptas amet!
+                </p>
+                <a href="#" class="learnMoreButton">Learn More</a>
+            </div>
+            <div class="glass_image">
+                <img src="img1.png" alt="greenGlass" class="glassOnRight">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" alt="Green Cup" onclick="imgSlider('img1.png'); changeCircleColor('#224430');"></li>
+            <li><img src="thumb2.png" alt="Pink Cup" onclick="imgSlider('img2.png'); changeCircleColor('#ffb6c1');"></li>
+            <li><img src="thumb3.png" style="transform: rotate(-15deg);" alt="Purple Cup" onclick="imgSlider('img3.png'); changeCircleColor('#ff69b4');"></li>
+        </ul>
+        <ul class="shoshIcons">
+            <li class="icons" id="fb"><a href="#"><img src="facebook.png" alt="fb_img"></a></li>
+            <li class="icons" id="insta"><a href="#"><img src="instagram.png" alt="ig_img"></a></li>
+            <li class="icons" id="twitter"><a href="#"><img src="twitter.png" alt="twt_img"></a></li>
+            
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(glassimages){
+            document.querySelector('.glassOnRight').src = glassimages;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;            
+        }
+    </script>
+
+</body>
+</html>
